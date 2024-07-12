@@ -46,7 +46,7 @@ with col2:
 
 # Load movie data and similarity matrix
 movies = pickle.load(open('movie_list.pkl', 'rb'))
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+# similarity = pickle.load(open('similarity.pkl', 'rb'))
 
 # About section
 st.header('About Movie Recommender System')
