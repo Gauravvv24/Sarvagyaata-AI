@@ -30,7 +30,6 @@ decorator
 deprecation
 dowhy
 pypdf
-re
 sentence-transformers
 spacy
 click
