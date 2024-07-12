@@ -42,7 +42,6 @@ pytube
 ultralytics
 g4f
 gpt-3.5-turbo
-Pillow
 pytz
 yfinance
 cvxpy
