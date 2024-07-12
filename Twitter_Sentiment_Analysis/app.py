@@ -7,7 +7,7 @@ from wordcloud import WordCloud, STOPWORDS
 import plotly.express as px
 
 # Load the model
-with open('twitter_sentiment.pkl', 'rb') as model_file:
+# with open('twitter_sentiment.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
 # Custom CSS for styling
