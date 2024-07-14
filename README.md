@@ -24,16 +24,15 @@ Welcome to Sarvagyaata AI, your all-in-one intelligent business solution. This a
 The application offers the following features:
 
 1. **Personalized Content Chatbot**
-2. **Chat with any PDF**
-3. **Personalized Computer Vision**
-4. **Movie Recommendation System**
-5. **Business Analyst Dashboard**
-6. **Causal Inference of Blockchain**
-7. **Sentiment Analysis of Twitter**
-8. **Stock Price Predictive Analytics**
-9. **CryptoCurrency Predictive Analytics**
-10. **Company Chat Analyser**
-11. **AutoML for Auto EDA**
+2. **Personalized Computer Vision**
+3. **Movie Recommendation System**
+4. **Business Analyst Dashboard**
+5. **Causal Inference of Blockchain**
+6. **Sentiment Analysis of Twitter**
+7. **Stock Price Predictive Analytics**
+8. **CryptoCurrency Predictive Analytics**
+9. **Company Chat Analyser**
+10. **AutoML for Auto EDA**
 
 # Explaination 
 ## 1.Personalized Content Chatbot Feature
