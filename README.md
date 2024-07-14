@@ -1,6 +1,7 @@
 #  Sarvagyaata AI Streamlit Application
 
-# Live Demo : https://github.com/user-attachments/assets/e78cccf0-929f-4d2b-b554-1f9db2f4636b
+# Live Demo : 
+<https://github.com/user-attachments/assets/e78cccf0-929f-4d2b-b554-1f9db2f4636b>
 
 ## Table of Contents
 1. [Introduction](#introduction)
