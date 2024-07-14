@@ -18,6 +18,8 @@
 ## Introduction
 Welcome to Sarvagyaata AI, your all-in-one intelligent business solution. This application is built using Streamlit and offers a variety of business intelligence features. Our team of passionate third-year engineering students in Artificial Intelligence and Data Science (AIDS) is dedicated to revolutionizing business intelligence through innovative solutions.
 
+![Home](https://github.com/user-attachments/assets/7f55a983-3b37-457f-b8cc-d7a8892bb22a)
+
 ## Features
 The application offers the following features:
 
@@ -36,6 +38,8 @@ The application offers the following features:
 # Explaination 
 ## 1.Personalized Content Chatbot Feature
 
+![Personalized Chatbot](https://github.com/user-attachments/assets/db255c3f-0e7a-4de0-8e24-0d66d28e710c)
+
 The **Personalized Content Chatbot** is designed to help users generate creative writing prompts based on their input, such as a genre, tone, or initial plot point. Leveraging the `gpt-3.5-turbo` model from OpenAI, this feature aids writers in overcoming writer's block and finding inspiration for their projects.
 
 ### How It Works
@@ -51,35 +55,12 @@ The **Personalized Content Chatbot** is designed to help users generate creative
 
 This feature is ideal for writers and anyone looking for creative inspiration for their writing projects.
 
-## 2.Chat with any PDF Feature
+## 2.Personalized Computer Vision Feature
 
-The **"Chat with any PDF"** feature enables users to interact with and extract information from a PDF document related to the Diamante Net Hackathon. By uploading a PDF guide, users can ask questions about the hackathon, and the system provides relevant answers based on the content of the PDF and additional pre-defined information.
+![Image Classification](https://github.com/user-attachments/assets/ebc9ff5a-1649-4341-b800-2b72cdef6ea7)
 
-### How It Works
+![Video Classification](https://github.com/user-attachments/assets/f80f9190-2b86-406f-9b8f-ef52c874e453)
 
-1. **Upload PDF**: Users can upload a PDF document related to the Diamante Net Hackathon.
-
-2. **Extract and Process Text**: The content from the uploaded PDF is extracted and combined with pre-defined hackathon information.
-
-3. **Question Handling**: Users can input questions about the hackathon. The system processes these questions and provides answers by:
-   - Splitting the text into manageable chunks.
-   - Finding the most relevant chunks based on the question.
-   - Classifying the type of question (e.g., person, location, date).
-   - Extracting relevant entities and information from the text.
-
-4. **Answer Display**: The system presents the most relevant information or answers based on the user's question.
-
-### User Interface
-
-- **Title**: "Diamante Net Hackathon Assistant"
-- **Subtitle**: "Your personal guide to the Diamante Net Hackathon"
-- **PDF Uploader**: Allows users to upload a PDF guide for additional information.
-- **Text Input**: Users enter their questions about the hackathon.
-- **Answer Display**: Shows the answer or relevant information extracted from the PDF and pre-defined content.
-
-This feature provides a user-friendly way to interact with and extract useful details from hackathon-related documents.
-
-## 3.Personalized Computer Vision Feature
 
 The **Personalized Computer Vision** feature focuses on **object detection and tracking** using the YOLOv8 model. This feature allows users to detect and track objects in images and videos by selecting different model configurations and input sources.
 
@@ -105,7 +86,10 @@ The **Personalized Computer Vision** feature focuses on **object detection and t
 
 This feature is designed for users needing to perform advanced computer vision tasks such as object detection and tracking in various types of media.
 
-## 4.Movie Recommender Engine
+## 3.Movie Recommender Engine
+
+![Movie Recommendation](https://github.com/user-attachments/assets/096e33d0-c50d-4cff-916a-f429bf37f625)
+
 
 The **Movie Recommender Engine** feature provides users with personalized movie recommendations based on their selected movie. This feature leverages a recommendation system to suggest similar movies, offering an engaging and interactive experience.
 
@@ -133,7 +117,11 @@ The **Movie Recommender Engine** feature provides users with personalized movie 
 
 This feature enhances the user experience by providing tailored movie suggestions and leveraging visual elements to engage users effectively.
 
-### 5.Bussiness Dashboard
+### 4.Bussiness Dashboard
+
+![Bussiness Analyst 1](https://github.com/user-attachments/assets/ac4a169e-4e9f-48ef-928b-5e9c9abcbfb7)
+![Bussiness Analyst 2](https://github.com/user-attachments/assets/cf1f1e55-3dde-424b-b677-3380522341cd)
+
 
 The dashboard offers a comprehensive platform for data analytics and visualization, built using Streamlit and various Python libraries.
 
@@ -163,7 +151,11 @@ The dashboard offers a comprehensive platform for data analytics and visualizati
 
 This dashboard is ideal for interactive data exploration and visualization, providing a powerful tool for gaining insights from data.
 
-### 6. Causal Inference in Blockchain Transactions Feature
+### 5. Causal Inference in Blockchain Transactions Feature
+
+![Casual Inference 1](https://github.com/user-attachments/assets/520aaa3a-cbf7-4e23-9bf0-a31bb2bd3929)
+![Casual Inference 2](https://github.com/user-attachments/assets/e3592e28-8456-4ea1-bb2a-cbc124edc982)
+
 
 This feature demonstrates causal inference in blockchain transactions using synthetic data. It aims to understand the causal effects of different transaction features on confirmation times.
 
@@ -192,7 +184,12 @@ This feature demonstrates causal inference in blockchain transactions using synt
 
 This feature provides an interactive and educational experience for understanding causal relationships in blockchain transactions, leveraging advanced statistical methods and visualizations.
 
-### 7.Twitter Sentiment Analysis Feature
+### 6.Twitter Sentiment Analysis Feature
+
+![Twitter 1](https://github.com/user-attachments/assets/e25857d1-d67c-490b-bc27-03becbafbe52)
+![Twitter 2](https://github.com/user-attachments/assets/4fe6b01c-b954-4721-a20f-48ce1e155d6f)
+
+
 
 This feature allows users to perform sentiment analysis on tweets using a pre-trained model and visualize the data distributions and word clouds based on the sentiment of tweets.
 
@@ -217,7 +214,12 @@ This feature allows users to perform sentiment analysis on tweets using a pre-tr
 
 This feature offers a comprehensive approach to sentiment analysis on Twitter, combining model prediction capabilities with rich data visualizations and user-friendly navigation.
 
-### 8. Stock Index Dashboard Application Overview
+### 7. Stock Index Dashboard Application Overview
+
+![Stock 1](https://github.com/user-attachments/assets/845860f2-ef03-4869-b6a2-09cb84fdbd0d)
+![Stock 2](https://github.com/user-attachments/assets/bf2b1971-1434-4558-888b-2744e423bccd)
+
+
 
 #### Tabs and Functionalities
 1. **APP INTRODUCTION:**
@@ -244,7 +246,11 @@ This feature offers a comprehensive approach to sentiment analysis on Twitter, c
 - 
 This summary captures the main components and functionalities of the Stock Index Dashboard application, emphasizing its use of various Python libraries for data analysis, visualization, and machine learning within a Streamlit framework.
 
-### 9. Crypto Dashboard Feature
+### 8. Crypto Dashboard Feature
+
+![Crypto 1](https://github.com/user-attachments/assets/32cc2cde-e988-4a56-bd10-852fd65acfed)
+![Crypto 2](https://github.com/user-attachments/assets/7507f614-4675-4ede-bf83-516f58b4c480)
+
 
 This feature provides a comprehensive cryptocurrency dashboard using Streamlit, displaying real-time price data from the Binance API.
 
@@ -272,7 +278,11 @@ This feature provides a comprehensive cryptocurrency dashboard using Streamlit, 
 
 This feature offers a user-friendly interface for monitoring and analyzing cryptocurrency prices, with options to customize the displayed data and download it for offline use. The use of real-time data from the Binance API ensures users have access to the most current market information.
 
-### 10. Personalized Company Chat Analyzer Feature
+### 9. Personalized Company Chat Analyzer Feature
+
+![Chat Analyser 1](https://github.com/user-attachments/assets/2427a886-ccce-4b3e-976f-24c8847d4c34)
+![Chat Analyser 2](https://github.com/user-attachments/assets/32555827-6375-4b16-901d-46c3b051d58c)
+
 
 This feature provides a comprehensive analysis of chat data, allowing users to gain insights into chat activity and patterns. The app is designed to handle chat data files, preprocess the data, and present various statistical and visual analyses.
 
@@ -317,7 +327,11 @@ This feature provides a comprehensive analysis of chat data, allowing users to g
 
 This feature offers a detailed and interactive way to analyze chat data, providing both high-level insights and granular details about chat activity, user behavior, and communication patterns.
 
-### 11. Robust AutoML App Feature
+### 10. Robust AutoML App Feature
+
+![AutoML 1](https://github.com/user-attachments/assets/da179956-d57f-4f15-b54f-cfc95d479cb7)
+![AutoML 2](https://github.com/user-attachments/assets/79575e1e-e27b-40c1-b534-4efce973e55a)
+
 
 This feature provides an end-to-end solution for building, training, and downloading a machine learning model. It includes functionalities for data upload, basic exploratory data analysis (EDA), model training, and model downloading.
 
@@ -405,6 +419,9 @@ The application is structured as follows:
 
 ## About Us
 We are a team of passionate third-year engineering students in Artificial Intelligence and Data Science (AIDS), dedicated to revolutionizing business intelligence through innovative solutions.
+
+![Home 1](https://github.com/user-attachments/assets/2948a143-965d-468d-8e17-f9f68e77d631)
+
 
 ### Team Members
 - **Harsh Chitaliya**: Harsh is a creative problem-solver with a keen interest in AI-driven chatbots and natural language processing. His innovative approach to personalized content delivery forms the backbone of our content chatbot feature.
