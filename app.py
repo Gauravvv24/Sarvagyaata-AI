@@ -1,5 +1,5 @@
 import streamlit as st
-from pathlib import Path
+import webbrowser
 
 # Custom theme with gradient background and feature colors
 def set_custom_theme():
@@ -9,7 +9,7 @@ def set_custom_theme():
         background: linear-gradient(135deg, #1E3A8A, #3B82F6);
     }
     .big-font {
-        font-size: 50px !important;
+        font-size:50px !important;
         color: #FFFFFF;
         font-weight: bold;
     }
@@ -38,7 +38,13 @@ def set_custom_theme():
         color: #E0F2FE;
         font-size: 14px;
     }
-    .stButton > button {
+    .css-1d391kg {
+        padding-top: 3rem;
+    }
+    .css-1v0mbdj {
+        padding-top: 0;
+    }
+    .stButton>button {
         width: 100%;
         border-radius: 20px;
         font-weight: bold;
@@ -48,110 +54,91 @@ def set_custom_theme():
     """, unsafe_allow_html=True)
 
 # Set page config
-st.set_page_config(page_title="Sarvagyaata AI", page_icon="🛡️", layout="wide")
+st.set_page_config(page_title="Smartarakshak", page_icon="🛡", layout="wide")
 
 # Apply custom theme
 set_custom_theme()
 
-# Initialize session state for navigation
-if 'page' not in st.session_state:
-    st.session_state.page = 'landing'
+# Title
+st.markdown('<p class="big-font">Welcome to Sarvagyaata</p>', unsafe_allow_html=True)
 
-# Function to display different pages based on session state
-def show_landing_page():
-    st.markdown('<p class="big-font">Welcome to Sarvagyaata AI</p>', unsafe_allow_html=True)
-    st.markdown('<h2 style="color: #E0F2FE;">Your All-in-One Intelligent Business Solution</h2>', unsafe_allow_html=True)
-    
-    # Features with colors and corresponding script names and directories
-    features = [
-        ("Personalized Content Chatbot", "#FDE68A", "Personalized  chatbot"),
-        ("Chat with any PDF", "#A7F3D0", "chatwithpdf"),
-        ("Personalized Computer Vision", "#BFDBFE", "Object_Detection"),
-        ("Movie Recommendation System", "#FCA5A5", "movie_recommendation"),
-        ("Business Analyst Dashboard", "#C7D2FE", "Bussiness Dashboard"),
-        ("Casual Inference of Blockchain", "#FCD34D", "Casual_Inference"),
-        ("Sentiment Analysis of Twitter", "#A5B4FC", "Twitter_Sentiment_Analysis"),
-        ("Stock Price Predictive Analytics", "#6EE7B7", "Stock_Index_App"),
-        ("CryptoCurrency Predictive Analytics", "#6EE7B7", "Crypto"),
-        ("Company Chat Analyser", "#93C5FD", "whatsapp-chat-analysis"),
-        ("AutoML for Auto EDA", "#FDBA74", "AutoML"),
-    ]
+# Subheader
+st.markdown('<h2 style="color: #E0F2FE;">Your All-in-One Intelligent Business Solution</h2>', unsafe_allow_html=True)
 
-    # Create three columns
-    col1, col2, col3 = st.columns(3)
+# Features with colors and links
+features = [
+    ("Personalized Content Chatbot", "#FDE68A", "https://sarvagyaataai-personalized-chatbot.streamlit.app/"),
+    ("Chat with any PDF", "#A7F3D0", "https://sarvagyaataai-chat-with-pdf.streamlit.app/"),
+    ("Personalized Computer Vision", "#BFDBFE", "https://sarvagyaata-ai-object-detection.streamlit.app/"),
+    ("Movie Recommendation System", "#FCA5A5", "https://sarvagyaata-ai-movie-recommendation.streamlit.app/"),
+    ("Business Analyst Dashboard", "#C7D2FE", "https://sarvagyaata-ai-bussiness-analyst.streamlit.app/"),
+    ("Casual Inference of Blockchain", "#FCD34D", "https://sarvagyaataai-casual-inference.streamlit.app/"),
+    ("Sentiment Analysis of Twitter", "#A5B4FC", "https://sarvagyaata-ai-twitter-sentiment-analysis.streamlit.app/"),
+    ("Stock Price Predictive Analytics", "#6EE7B7", "https://sarvagyaata-ai-stock-index-price.streamlit.app/"),
+    ("CryptoCurrency Predictive Analytics", "#6EE7B7", "https://sarvagyaataai-cryptocurrency.streamlit.app/"),
+    ("Company Chat Analyser", "#93C5FD", "https://sarvagyaataai-company-chat-analyser.streamlit.app/"),
+    ("AutoML for Auto EDA", "#FDBA74", "https://sarvagyaataai-automl.streamlit.app/")
+]
 
-    # Distribute features across columns
-    for i, (feature, color, script_directory) in enumerate(features):
-        with [col1, col2, col3][i % 3]:
-            st.markdown(f'<p class="feature-text" style="color: {color};">{feature}</p>', unsafe_allow_html=True)
-            
-            # Custom button style
-            button_style = f"""
-            <style>
-            div.stButton > button:first-child {{
-                background-color: {color};
-                color: #1E3A8A;
-            }}
-            div.stButton > button:hover {{
-                background-color: {color};
-                color: #1E3A8A;
-                opacity: 0.8;
-            }}
-            </style>
-            """
-            st.markdown(button_style, unsafe_allow_html=True)
-            
-            # Button for each feature
-            if st.button(f"Try Now", key=f"feature_{i}"):
-                st.session_state.page = script_directory
+# Create three columns
+col1, col2, col3 = st.columns(3)
 
-    # About Us Section
-    st.markdown('<div class="about-us">', unsafe_allow_html=True)
-    st.markdown('<h2 style="color: #FDE68A;">About Us</h2>', unsafe_allow_html=True)
-    st.markdown('<p style="color: #E0F2FE;">We are a team of passionate third-year engineering students in Artificial Intelligence and Data Science (AIDS), dedicated to revolutionizing business intelligence through innovative solutions.</p>', unsafe_allow_html=True)
+# Distribute features across columns
+for i, (feature, color, link) in enumerate(features):
+    with [col1, col2, col3][i % 3]:
+        st.markdown(f'<p class="feature-text" style="color: {color};">{feature}</p>', unsafe_allow_html=True)
+        
+        # Custom button style
+        button_style = f"""
+        <style>
+        div.stButton > button:first-child {{
+            background-color: {color};
+            color: #1E3A8A;
+        }}
+        div.stButton > button:hover {{
+            background-color: {color};
+            color: #1E3A8A;
+            opacity: 0.8;
+        }}
+        </style>
+        """
+        st.markdown(button_style, unsafe_allow_html=True)
+        
+        # Button for each feature
+        if st.button(f"Try Now", key=f"feature_{i}"):
+            st.write(f"You clicked on {feature}!")
+            webbrowser.open_new_tab(link)  # Open link in new tab
 
-    team_members = [
-        {
-            "name": "Harsh Chitaliya",
-            "bio": "Harsh is a creative problem-solver with a keen interest in AI-driven chatbots and natural language processing. His innovative approach to personalized content delivery forms the backbone of our content chatbot feature."
-        },
-        {
-            "name": "Gaurav Singh Khati",
-            "bio": "Gaurav excels in computer vision and machine learning. His expertise in developing tailored CV models has been crucial in creating our personalized computer vision solutions for various industry applications."
-        },
-        {
-            "name": "Satyavrat Tiwari",
-            "bio": "Satyavrat is passionate about data analytics and predictive modeling. His work on real-time predictive analytics for stock prices and cryptocurrency has added significant value to our financial intelligence offerings."
-        }
-    ]
+# About Us Section
+st.markdown('<div class="about-us">', unsafe_allow_html=True)
+st.markdown('<h2 style="color: #FDE68A;">About Us</h2>', unsafe_allow_html=True)
+st.markdown('<p style="color: #E0F2FE;">We are a team of passionate third-year engineering students in Artificial Intelligence and Data Science (AIDS), dedicated to revolutionizing business intelligence through innovative solutions.</p>', unsafe_allow_html=True)
 
-    for member in team_members:
-        st.markdown(f'''
-        <div class="team-member">
-            <h3>{member['name']}</h3>
-            <p>{member['bio']}</p>
-        </div>
-        ''', unsafe_allow_html=True)
+team_members = [
+    {
+        "name": "Harsh Chitaliya",
+        "bio": "Harsh is a creative problem-solver with a keen interest in AI-driven chatbots and natural language processing. His innovative approach to personalized content delivery forms the backbone of our content chatbot feature."
+    },
+    {
+        "name": "Gaurav Singh Khati",
+        "bio": "Gaurav excels in computer vision and machine learning. His expertise in developing tailored CV models has been crucial in creating our personalized computer vision solutions for various industry applications."
+    },
+    {
+        "name": "Satyavrat Tiwari",
+        "bio": "Satyavrat is passionate about data analytics and predictive modeling. His work on real-time predictive analytics for stock prices and cryptocurrency has added significant value to our financial intelligence offerings."
+    }
+]
 
-    st.markdown('</div>', unsafe_allow_html=True)
-    st.markdown("---")
-    st.markdown('<p style="color: #E0F2FE;">© 2024 Sarvagyaata AI. All rights reserved.</p>', unsafe_allow_html=True)
+for member in team_members:
+    st.markdown(f'''
+    <div class="team-member">
+        <h3>{member['name']}</h3>
+        <p>{member['bio']}</p>
+    </div>
+    ''', unsafe_allow_html=True)
 
-# Function to show specific feature page
-def show_feature_page(script_directory):
-    script_path = Path(script_directory) / "app.py"
-    if script_path.exists():
-        st.markdown(f'<p class="big-font">Loading {script_directory}...</p>', unsafe_allow_html=True)
-        exec(open(script_path).read())
-    else:
-        st.error(f"Script {script_path} not found!")
+st.markdown('</div>', unsafe_allow_html=True)
 
-# Main logic to display correct page
-def main():
-    if st.session_state.page == 'landing':
-        show_landing_page()
-    else:
-        show_feature_page(st.session_state.page)
-
-if __name__ == "__main__":
-    main()
+# Footer
+st.markdown("---")
+st.markdown('<p style="color: #E0F2FE;">© 2024 Smartarakshak. All rights reserved.</p>', unsafe_allow_html=True)
