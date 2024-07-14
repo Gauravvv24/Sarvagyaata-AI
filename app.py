@@ -1,5 +1,4 @@
 import streamlit as st
-import webbrowser
 
 # Custom theme with gradient background and feature colors
 def set_custom_theme():
@@ -68,7 +67,6 @@ st.markdown('<h2 style="color: #E0F2FE;">Your All-in-One Intelligent Business So
 # Features with colors and links
 features = [
     ("Personalized Content Chatbot", "#FDE68A", "https://sarvagyaataai-personalized-chatbot.streamlit.app/"),
-    ("Chat with any PDF", "#A7F3D0", "https://sarvagyaataai-chat-with-pdf.streamlit.app/"),
     ("Personalized Computer Vision", "#BFDBFE", "https://sarvagyaata-ai-object-detection.streamlit.app/"),
     ("Movie Recommendation System", "#FCA5A5", "https://sarvagyaata-ai-movie-recommendation.streamlit.app/"),
     ("Business Analyst Dashboard", "#C7D2FE", "https://sarvagyaata-ai-bussiness-analyst.streamlit.app/"),
@@ -106,8 +104,8 @@ for i, (feature, color, link) in enumerate(features):
         
         # Button for each feature
         if st.button(f"Try Now", key=f"feature_{i}"):
-            st.write(f"You clicked on {feature}!")
-            webbrowser.open_new_tab(link)  # Open link in new tab
+            js_code = f'window.open("{link}", "_blank")'
+            st.components.v1.html(f'<script>{js_code}</script>', height=0)
 
 # About Us Section
 st.markdown('<div class="about-us">', unsafe_allow_html=True)
